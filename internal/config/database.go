@@ -18,7 +18,7 @@ var DB *gorm.DB
 func ConnectDatabase() *gorm.DB {
 	// Load .env file (if available)
 	if err := godotenv.Load(); err != nil {
-		log.Println("⚠️ Warning: No .env file found, using system environment variables")
+		log.Println("Warning: No .env file found, using system environment variables")
 	}
 
 	// Load environment variables
@@ -27,7 +27,8 @@ func ConnectDatabase() *gorm.DB {
 	dbPass := os.Getenv("DB_PASS")
 	dbName := os.Getenv("DB_NAME")
 	dbPort := os.Getenv("DB_PORT")
-	dbSSLMode := os.Getenv("DB_SSLMODE") // Required for Neon
+	dbSSLMode := os.Getenv("DB_SSLMODE")
+	// Required for Neon
 
 	// Create DSN (Data Source Name)
 	dsn := fmt.Sprintf(
@@ -38,20 +39,19 @@ func ConnectDatabase() *gorm.DB {
 	// Open GORM database connection
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		log.Fatalf("❌ Database Connection Failed: %v", err)
+		log.Fatalf("Database Connection Failed: %v", err)
 	}
 
-	log.Println("✅ Connected to Database successfully!")
+	log.Println("Connected to Database successfully!")
 
 	// Assign DB to global variable
 	DB = db
 
 	// AutoMigrate Models (Add models as needed)
 	if err := db.AutoMigrate(&models.User{}); err != nil {
-		log.Fatalf("❌ Migration Failed: %v", err)
+		log.Fatalf("Migration Failed: %v", err)
 	}
 
-	log.Println("✅ Database Migrated Successfully!")
-
+	log.Println(" Database Migrated Successfully!")
 	return db
 }
