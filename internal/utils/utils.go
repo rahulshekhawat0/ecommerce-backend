@@ -58,5 +58,5 @@ func CreateToken(id uint, email, role string) (string, error) {
 
 func CheckPasswordHash(password string, hashedPassword string) bool {
 	err := bcrypt.CompareHashAndPassword([]byte(hashedPassword), []byte(password))
-	return err == nil // Returns true if the password matches, false otherwise
+	return err == nil // Returns true if matches
 }

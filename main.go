@@ -20,6 +20,9 @@ func main() {
 	// Create a new Fiber instance
 	app := fiber.New()
 	routes.SetupAuthRoutes(app)
+	routes.SetupProductRoutes(app)
+	routes.SetupCartRoutes(app)
+	routes.SetupOrderRoutes(app)
 	// Define a basic route
 	app.Get("/ecom", func(c *fiber.Ctx) error {
 		return c.SendString("Welcome to E-commerce API!")

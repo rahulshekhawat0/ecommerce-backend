@@ -48,7 +48,11 @@ func ConnectDatabase() *gorm.DB {
 	DB = db
 
 	// AutoMigrate Models (Add models as needed)
-	if err := db.AutoMigrate(&models.User{}); err != nil {
+	if err := db.AutoMigrate(&models.User{},
+		&models.Product{},
+		&models.CartItem{},
+		&models.Order{},
+		&models.OrderItem{}); err != nil {
 		log.Fatalf("Migration Failed: %v", err)
 	}
 
