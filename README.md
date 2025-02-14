@@ -3,7 +3,7 @@
 ## 🚀 Introduction
 This project is a **high-performance** and **scalable** E-Commerce backend API built using **Go (Golang)** and the **Fiber** web framework. It is designed to efficiently handle user authentication, product management, shopping carts, orders, and more. The system ensures **speed, security, and scalability**, making it ideal for production-grade applications.
 
-## 🏗️ Tech Stack & Why We Chose It
+## 🏗️ Tech Stack & Why I Chose It
 
 | Technology  | Purpose | Why? |
 |------------|---------|------|
@@ -83,42 +83,42 @@ JWT_SECRET=your-secret-key
 ```
 ### 4️⃣ Run Migrations (Initialize Database)
 ```bash
-go run cmd/migrate.go
+go run migrate.go
 ```
 ### 5️⃣ Start the Server
 ```bash
-go run cmd/main.go
+go run main.go
 ```
-API will be running at: `http://localhost:3000`
+API will be running at: `http://localhost:8000`
 
 ## 📌 API Endpoints
 ### User Authentication
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| **POST** | `/api/auth/register` | Register a new user |
-| **POST** | `/api/auth/login` | Authenticate user & get JWT token |
+| **POST** | `/ecom/auth/register` | Register a new user |
+| **POST** | `/ecom/auth/login` | Authenticate user & get JWT token |
 
 ### Products
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| **POST** | `/api/products` | Add a new product (Admin only) |
-| **GET** | `/api/products` | Get all products |
-| **PUT** | `/api/products/:id` | Update product (Admin only) |
-| **DELETE** | `/api/products/:id` | Delete product (Admin only) |
+| **POST** | `/ecom/products` | Add a new product (Admin only) |
+| **GET** | `/ecom/products` | Get all products |
+| **PUT** | `/ecom/products/:id` | Update product (Admin only) |
+| **DELETE** | `/ecom/products/:id` | Delete product (Admin only) |
 
 ### Cart
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| **POST** | `/api/cart` | Add item to cart |
-| **GET** | `/api/cart` | View cart items |
-| **DELETE** | `/api/cart/:id` | Remove item from cart |
+| **POST** | `/ecom/cart` | Add item to cart |
+| **GET** | `/ecom/cart` | View cart items |
+| **DELETE** | `/ecom/cart/:id` | Remove item from cart |
 
 ### Orders
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| **POST** | `/api/orders` | Checkout cart & place order |
-| **GET** | `/api/orders` | Get user order history |
-| **PUT** | `/api/orders/:id/status` | Update order status (Admin only) |
+| **POST** | `/ecom/orders` | Checkout cart & place order |
+| **GET** | `/ecom/orders` | Get user order history |
+| **PUT** | `/ecom/orders/:id/status` | Update order status (Admin only) |
 
 ## 👥 Contributors
 - **Your Name** (Lead Developer)
