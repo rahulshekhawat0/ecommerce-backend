@@ -3,6 +3,9 @@
 ## 🚀 Introduction
 This project is a **high-performance** and **scalable** E-Commerce backend API built using **Go (Golang)** and the **Fiber** web framework. It is designed to efficiently handle user authentication, product management, shopping carts, orders, and more. The system ensures **speed, security, and scalability**, making it ideal for production-grade applications.
 
+![DALL·E 2025-02-14 11 54 30 - A simple and clean social preview image for an e-commerce backend API built with Go (Golang)  The design should include the Go Gopher mascot holding a](https://github.com/user-attachments/assets/bba5e560-1599-400f-a2c3-c05dd1f6c8ef)
+
+
 ## 🏗️ Tech Stack & Why I Chose It
 
 | Technology  | Purpose | Why? |
