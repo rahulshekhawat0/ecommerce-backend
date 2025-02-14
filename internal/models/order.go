@@ -4,12 +4,13 @@ import "time"
 
 // Order represents an order made by a user.
 type Order struct {
-	ID         uint      `gorm:"primaryKey" json:"id"`
-	UserID     uint      `json:"user_id"`                         // Who placed the order
-	Status     string    `gorm:"default:'Pending'" json:"status"` // Pending, Shipped, etc.
-	TotalPrice float64   `json:"total_price"`
-	CreatedAt  time.Time `json:"created_at"`
-	UpdatedAt  time.Time `json:"updated_at"`
+	ID            uint      `gorm:"primaryKey" json:"id"`
+	UserID        uint      `json:"user_id"`                         // Who placed the order
+	Status        string    `gorm:"default:'Pending'" json:"status"` // Pending, Shipped, etc.
+	TotalPrice    float64   `json:"total_price"`
+	PaymentStatus string    `gorm:"default:'Unpaid'" json:"payment_status"` // Unpaid, Paid
+	CreatedAt     time.Time `json:"created_at"`
+	UpdatedAt     time.Time `json:"updated_at"`
 }
 
 // OrderItem represents a product in an order.

@@ -23,6 +23,7 @@ func main() {
 	routes.SetupProductRoutes(app)
 	routes.SetupCartRoutes(app)
 	routes.SetupOrderRoutes(app)
+	routes.SetupAdminRoutes(app)
 	// Define a basic route
 	app.Get("/ecom", func(c *fiber.Ctx) error {
 		return c.SendString("Welcome to E-commerce API!")
