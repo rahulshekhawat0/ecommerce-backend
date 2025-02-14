@@ -124,7 +124,7 @@ API will be running at: `http://localhost:8000`
 | **PUT** | `/ecom/orders/:id/status` | Update order status (Admin only) |
 
 ## 👥 Contributors
-- **Your Name** (Lead Developer)
+- **RAHUL SHEKHAWAT**(Lead Developer)
 - Open to contributors! Feel free to submit PRs.
 
 ## 📜 License
