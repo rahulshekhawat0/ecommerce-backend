@@ -1,0 +1,25 @@
+syntax = "proto3";  
+
+package ecommerce;  
+
+option go_package = "./protos/ecommerce";  
+
+service ProductService {  
+    rpc GetProductDetails(ProductRequest) returns (ProductResponse);  
+}  
+
+message ProductRequest {  
+    string product_id = 1;  
+}
+
+message Product {  
+    string id = 1;  
+    string name = 2;  
+    float price = 3;  
+    string description = 4;  
+}
+
+message ProductResponse {  
+    string message = 1;  
+    Product product = 2;  
+}
